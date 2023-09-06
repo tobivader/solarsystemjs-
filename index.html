@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+	<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<style>
+			body{
+				min-width: 100vw;
+				min-width: 100vh;
+			}
+			#control{
+				position: absolute;
+				display: flex;
+				flex-direction: column;
+				padding: 1em;
+				color: white;
+				background-color: gray;
+			}
+			#control div{
+				display: flex;
+			}
+			div p{
+				margin-right: 0.5em;
+			}
+			#details{
+				position: absolute;
+        		right: 0px;
+				display: flex;
+				border-radius: 0.5em;
+				flex-direction: column;
+				padding: 1em;
+				color: white;
+				background-color: gray;
+				width: 300px;
+			}
+			#details div{
+				font-size: 1.2em;
+				border-bottom: solid white 1px;
+				margin: 0.3em;
+				padding: 0.3em;
+				background-color: dimgray;
+				border-radius: 0.2em;
+			}
+		</style>
+		<script type="module" src="./index.js"></script>
+	</head>
+		<body>
+			<div id="control">
+				<h1>COIS 4480 Final Project</h1>
+				<div>
+					<button id="toggleCam">Toggle Camera Rotation</button>
+				</div>
+				<h3>Planet Rotation Speed</h3>
+				<div>
+					<p>Mercury</p>
+					<input type="range" min="1" max="100" id="Mercury" value="50">
+				</div>
+				<div>
+					<p>Venus</p>
+					<input type="range" min="1" max="100" id="Venus" value="50">
+				</div>
+				<div>
+					<p>Earth</p>
+					<input type="range" min="1" max="100" id="Earth" value="50">
+				</div>
+				<div>
+					<p>Mars</p>
+					<input type="range" min="1" max="100" id="Mars" value="50">
+				</div>
+				<div>
+					<p>Jupiter</p>
+					<input type="range" min="1" max="100" id="Jupiter" value="50">
+				</div>
+				<div>
+					<p>Saturn</p>
+					<input type="range" min="1" max="100" id="Saturn" value="50">
+				</div>
+				<div>
+					<p>Uranus</p>
+					<input type="range" min="1" max="100" id="Uranus" value="50">
+				</div>
+				<div>
+					<p>Neptune</p>
+					<input type="range" min="1" max="100" id="Neptune" value="50">
+				</div>
+				</div>
+			</div>
+			<div id="details" class="hide">
+				<h3>Object Details</h3>
+				<p>Click on any planet. Use mouse to navigate the space</p>
+				<h3 id="obj"></h3>
+				<span id="dts"></span>
+			</div>
+			<canvas id="canvas"></canvas>
+		</body>
+	</html>
+
